@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(135deg, #f8c8dc, #d0f0c0, #add8e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.intro {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin: 15px 0; 
+    line-height: 2; 
+    font-weight: 500; 
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; 
+}
+
+/* Inner Box */
+.inner-box {
+    width: 900px; /* Fixed width */
+    height: 600px; /* Fixed height */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for modern browsers */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.inner-box::-webkit-scrollbar {
+    display: none; /* Completely hide the scrollbar */
+}
+
+/* Profile Image */
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.5); 
+}
+
+/* Highlighted Text */
+.highlight {
+    background: rgba(252, 207, 235, 0.4);
+    padding: 10px 15px; 
+    border-radius: 10px;
+    font-size: 28px; 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+/* Navigation Icons */
+.nav-icons {
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px; 
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin-top: 20px;
+    justify-content: space-around; 
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-btn img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.nav-btn:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Project Section - Gallery Style */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 50px; /* Add spacing between items */
+    margin-top: 20px; /* Add spacing above the grid */
+    width: 100%; /* Ensure the grid takes full width of the container */
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card img {
+    width: 100%; /* Make images responsive */
+    height: 300px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill the card */
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 18px; 
+    text-align: center; 
+    padding: 10px;
+}
+
+.card:hover .overlay {
+    opacity: 1; 
+}
+/*SKILLS*/
+.skills-section {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-group {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.skill-group h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skill-item span {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
