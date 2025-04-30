@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,12 +16,11 @@
             </div>
 
             <!-- Intro Text -->
-     <div class="intro">
-     <h2>Hey, I'm <span class="highlight">Anushka!</span></h2>
-    <p>I'm a <span class="highlight">Developer</span> who loves crafting clean and intuitive designs while focusing on 
-       <span class="highlight">coding</span> and building impactful applications.</p>
-    </div>
-
+            <div class="intro">
+                <h2>Hey, I'm <span class="highlight">Anushka!</span></h2>
+                <p>I'm a <span class="highlight">Developer</span> who loves crafting clean and intuitive designs while focusing on 
+                   <span class="highlight">coding</span> and building impactful applications.</p>
+            </div>
 
             <!-- Navigation Icons -->
             <nav class="nav-icons">
@@ -31,7 +30,7 @@
                 <a href="skills.html" class="nav-btn">
                     <img src="icons/skill.png" alt="Skills">
                 </a>
-                <a href="certificates.html" class="nav-btn">
+                <a href="#certificates-section" class="nav-btn"> <!-- Updated link -->
                     <img src="icons/certificate.png" alt="Certificates">
                 </a>
                 <a href="experience.html" class="nav-btn">
@@ -40,9 +39,47 @@
                 <a href="contact.html" class="nav-btn">
                     <img src="icons/contact.png" alt="Contact">
                 </a>
-                
             </nav>
         </div>
     </div>
+
+    <!-- Certificate Section -->
+    <section id="certificates-section" class="certificates-section"> <!-- Added id -->
+        <h2 class="section-title">Certificates</h2>
+        <div class="carousel">
+            <button class="carousel-btn prev-btn">❮</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide">
+                        <img src="certificates/problemsolvingbasic.png" alt="Certificate 1">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="certificates/tcs.png" alt="Certificate 2">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="certificates/sqlbasics.png" alt="Certificate 3">
+                    </li> 
+<li class="carousel-slide">
+                        <img src="certificates/unstop1.png" alt="Certificate 5">
+                    </li>  <li class="carousel-slide">
+                        <img src="certificates/unstop2.png" alt="Certificate 6">
+                    </li>  <li class="carousel-slide">
+                        <img src="certificates/matlab.png" alt="Certificate 7">
+                    </li>  <li class="carousel-slide">
+                        <img src="certificates/scwoc.png" alt="Certificate 8">
+                    </li>  <li class="carousel-slide">
+                        <img src="certificates/postmanapi.png" alt="Certificate 9">
+                    </li>  <li class="carousel-slide">
+                        <img src="certificates/hacktoberfest24 (1).png" alt="Certificate 10">
+                    </li>  <li class="carousel-slide">
+                        <img src="certificates/gssoc24.png" alt="Certificate 11">
+                    </li>  <li class="carousel-slide">
+                        <img src="certificates/acwoc25.jpeg" alt="Certificate 12">
+                    
+                </ul>
+            </div>
+            <button class="carousel-btn next-btn">❯</button>
+        </div>
+    </section>
 </body>
 </html>
