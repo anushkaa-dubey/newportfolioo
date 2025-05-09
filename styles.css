@@ -402,3 +402,67 @@ body {
         transform: translateY(0);
     }
 }
+/* Experience Section */
+.experience-content {
+    padding: 20px;
+    width: 100%;
+}
+
+.experience-content h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.experience-content h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #f8c8dc, #d0f0c0, #add8e6);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.organization {
+    color: #444;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.description {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
