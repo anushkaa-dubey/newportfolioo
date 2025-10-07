@@ -104,4 +104,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Theme Switcher
+    const themeSwitch = document.querySelector('.theme-switch');
+    const body = document.body;
+
+    themeSwitch.addEventListener('click', () => {
+        body.classList.toggle('gta-theme');
+        
+        // Update button title
+        const isGTATheme = body.classList.contains('gta-theme');
+        themeSwitch.setAttribute('data-title', isGTATheme ? 'Switch to Aesthetic Mode' : 'Switch to GTA Mode');
+        
+        // Update icon
+        const icon = themeSwitch.querySelector('img');
+        icon.src = isGTATheme ? 'icons/aesthetic-switch.png' : 'icons/gta-switch.png';
+    });
 });

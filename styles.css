@@ -231,8 +231,11 @@ body {
 
 .card-front img {
     width: 100%;
-    height: 85%;
+    height: 160px; /* Adjust height for rectangle shape */
     object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #f8f8f8;
 }
 
 .card-title {
@@ -1094,4 +1097,107 @@ body {
     color: #333;
     position: relative;
     z-index: 1;
+}
+/* 
+.gta-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffd700;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.gta-btn:hover {
+    transform: scale(1.05);
+    background: #ffed4a;
+}
+
+.gta-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Theme Switcher */
+/* .theme-switch {
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-switch img {
+    transition: transform 0.5s ease;
+}
+
+.theme-switch:hover img {
+    transform: rotate(180deg);
+}
+
+/* GTA Theme Styles 
+body.gta-theme {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+body.gta-theme .inner-box {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border: 2px solid #ffd700;
+}
+
+body.gta-theme .highlight {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+}
+
+body.gta-theme .nav-icons {
+    background: rgba(42, 42, 42, 0.8);
+}
+
+body.gta-theme .nav-btn::after {
+    background: #2a2a2a;
+    color: #ffd700;
+}
+
+body.gta-theme .resume-btn {
+    background: #ffd700;
+    color: #000;
+}
+
+body.gta-theme .resume-btn span {
+    color: #000;
+}
+
+body.gta-theme .modal-content {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border: 2px solid #ffd700;
+}
+
+body.gta-theme .close-modal {
+    color: #ffd700;
+}
+ 
+body.gta-theme .section-title {
+    color: #ffd700;
+}
+
+body.gta-theme .section-title:after {
+    background: #ffd700;
+} */
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.card-link:focus .card,
+.card-link:active .card {
+    box-shadow: 0 0 0 3px #0077b5;
 }
