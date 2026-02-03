@@ -1,0 +1,186 @@
+.projects {
+    transition: background 0.6s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.toggles {
+    display: flex;
+    gap: 10px;
+    background: #f0f0f0;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.toggleBtn {
+    padding: 6px 16px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.toggleBtn.active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sectionTitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #888;
+}
+
+.viewToggle {
+    color: #888;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.viewToggle:hover {
+    background: #f9f9f9;
+    color: #000;
+    border-color: #ddd;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+@media (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projectCard {
+    position: relative;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+}
+
+.projectContent {
+    z-index: 2;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.projectCard:hover .projectContent {
+    transform: translateY(-20px);
+}
+
+.projectTitle {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.projectDescription {
+    font-size: 1rem;
+    color: #666;
+    max-width: 80%;
+    margin-bottom: 25px;
+}
+
+.projectLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.link {
+    color: #888;
+}
+
+.link:hover {
+    color: #000;
+}
+
+.revealOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.projectCard:hover .revealOverlay {
+    opacity: 1;
+}
+
+.revealOverlay span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+}
+
+/* Play mode */
+.playView {
+    background: #fff9f0;
+}
+
+.playView .sectionTitle {
+    color: #f59e0b;
+}
+
+.playView .projectCard {
+    background: #fff;
+    border-color: #ffedd5;
+    border-style: dashed;
+}
+
+.playView .projectTitle {
+    color: #92400e;
+}
+
+.playView .projectDescription {
+    font-family: inherit;
+    font-weight: 300;
+}
+
+/* Fun Mode */
+.fun .projectCard {
+    border-radius: 40px;
+    border-color: #eee;
+}
+
+.fun .projectTitle {
+    font-family: var(--font-outfit);
+}

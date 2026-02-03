@@ -1,0 +1,127 @@
+.footer {
+    padding: 120px 20px 60px;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contactSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin-bottom: 150px;
+}
+
+@media (max-width: 900px) {
+    .contactSection {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 400px;
+}
+
+.email {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.socials {
+    display: flex;
+    gap: 24px;
+}
+
+.socialLink {
+    color: #888;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLink:hover {
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #000;
+    background: #fff;
+}
+
+.submitBtn {
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.submitBtn:hover {
+    background: #333;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.backToTop {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 1px solid #555;
+    padding-bottom: 2px;
+}
+
+.backToTop:hover {
+    color: #000;
+    border-bottom-color: #000;
+}

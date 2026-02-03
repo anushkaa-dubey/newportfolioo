@@ -1,0 +1,37 @@
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-2px, -2px);
+    /* Offset to point correctly */
+    transition: transform 0.1s ease-out;
+    will-change: left, top;
+}
+
+.cursor svg {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cursor.hovering svg {
+    transform: scale(1.2);
+}
+
+.trail {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.15s ease-out;
+}
+
+.cursor.hovering .trail {
+    transform: scale(3);
+    opacity: 0.1;
+}

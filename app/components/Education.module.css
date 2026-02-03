@@ -1,0 +1,92 @@
+.education {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.education.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sectionTitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #888;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #eee;
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.timelineItem:last-child {
+    margin-bottom: 0;
+}
+
+.dot {
+    position: absolute;
+    left: -35px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 1;
+}
+
+.timelineItem:hover .dot {
+    transform: scale(1.5);
+    background: #000;
+}
+
+.content {
+    padding-left: 20px;
+}
+
+.year {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #999;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #1a1a1a;
+}
+
+.institution {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #777;
+    max-width: 600px;
+}

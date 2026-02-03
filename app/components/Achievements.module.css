@@ -1,0 +1,64 @@
+.achievements {
+    max-width: 900px;
+}
+
+.sectionTitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #888;
+    margin-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.achCard {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.achCard:last-child {
+    border-bottom: none;
+}
+
+.achCard:hover {
+    transform: translateX(10px);
+}
+
+.achIcon {
+    color: #000;
+    background: #f9f9f9;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.achTitle {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.achEvent {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.achDesc {
+    font-size: 0.95rem;
+    color: #888;
+    line-height: 1.5;
+}

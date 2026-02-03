@@ -1,0 +1,49 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import styles from './About.module.css';
+
+export default function About() {
+    const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <section ref={sectionRef} className={`${styles.about} ${isVisible ? styles.visible : ''}`} id="about">
+            <div className={styles.container}>
+                <div className={styles.left}>
+                    <div className={styles.aestheticOrb}>
+                        <div className={styles.orbInner}></div>
+                    </div>
+                </div>
+                <div className={styles.right}>
+                    <h2 className={styles.sectionTitle}>The Vision</h2>
+                    <div className={styles.text}>
+                        <p>
+                            Developer by day, creator by night. I specialize in turning complex problems into elegant, user-centric solutions.
+                        </p>
+                        <p>
+                            Whether it's a high-performance SaaS platform or an AI-driven medical tool, my goal is always the same: **Minimalism that speaks volumes.**
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

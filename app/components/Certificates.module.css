@@ -1,0 +1,144 @@
+.certificates {
+    padding: 120px 20px;
+    max-width: 100% !important;
+    background: #fcfcfc;
+}
+
+.sectionTitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #888;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.certCard {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: none;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.certCard:hover {
+    transform: translateY(-5px);
+    border-color: #000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.imageBox {
+    width: 60px;
+    height: 60px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.certCard:hover .imageBox {
+    background: #000;
+    color: #fff;
+}
+
+.certInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.certLabel {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.viewLink {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    font-weight: 600;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+    backdrop-filter: blur(15px);
+    padding: 40px;
+}
+
+.modalContent {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalImageContainer {
+    width: 100%;
+    max-height: 75vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.modalImage {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.modalTitle {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.closeBtn {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    color: #1a1a1a;
+    padding: 10px;
+}
+
+.closeBtn:hover {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
