@@ -24,7 +24,7 @@ const academicExp = [
 
     {
         role: "Vice President",
-        company: "Notion Community",
+        company: "Notion Community, VIT Bhopal",
         period: "Community",
         description: "Leading community initiatives and organizing workshops on productivity and digital organization.",
         tech: ["Productivity", "Leadership", "Workshops"]
@@ -38,7 +38,7 @@ const academicExp = [
     },
     {
         role: "Social Media Core Member",
-        company: "AI Club",
+        company: "AI Club, VIT Bhopal",
         period: "Club",
         description: "Managing social media presence and content strategy for the AI club. Promoting technical literacy.",
         tech: ["Strategy", "Content"]
