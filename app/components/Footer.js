@@ -1,8 +1,45 @@
 'use client';
 
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState(null);
+
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ;
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setStatus(null);
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        };
+
+        try {
+            await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+            setStatus({ ok: true, msg: 'Message sent, thank you!' });
+            setName('');
+            setEmail('');
+            setMessage('');
+        } catch (err) {
+            setStatus({ ok: false, msg: 'Failed to send message. Please try again later.' });
+            console.error('EmailJS error:', err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <footer className={styles.footer} id="contact">
             <div className={styles.container}>
@@ -33,17 +70,44 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <form className={styles.form} onSubmit={e => e.preventDefault()}>
+                    <form className={styles.form} onSubmit={handleSubmit}>
                         <div className={styles.formGroup}>
-                            <input type="text" placeholder="Name" className={styles.input} />
+                            <input
+                                type="text"
+                                placeholder="Name"
+                                className={styles.input}
+                                value={name}
+                                onChange={e => setName(e.target.value)}
+                                required
+                            />
                         </div>
                         <div className={styles.formGroup}>
-                            <input type="email" placeholder="Email" className={styles.input} />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                className={styles.input}
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                required
+                            />
                         </div>
                         <div className={styles.formGroup}>
-                            <textarea placeholder="Message" rows="4" className={styles.input}></textarea>
+                            <textarea
+                                placeholder="Message"
+                                rows="4"
+                                className={styles.input}
+                                value={message}
+                                onChange={e => setMessage(e.target.value)}
+                                required
+                            ></textarea>
                         </div>
-                        <button type="submit" className={styles.submitBtn}>Send Message</button>
+                        <button type="submit" className={styles.submitBtn} disabled={loading}>
+                            {loading ? 'Sending...' : 'Send Message'}
+                        </button>
+
+                        {status && (
+                            <p className={status.ok ? styles.success : styles.error}>{status.msg}</p>
+                        )}
                     </form>
                 </div>
 

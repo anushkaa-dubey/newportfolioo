@@ -36,11 +36,11 @@ export default function About() {
                     <h2 className={styles.sectionTitle}>The Vision</h2>
                     <div className={styles.text}>
                         <p>
-                            Developer by day, creator by night. I specialize in turning complex problems into elegant, user-centric solutions.
-                        </p>
+I’m a software developer focused on building reliable, accessible web applications and solving real user problems through collaboration.
+</p>
                         <p>
-                            Whether it's a high-performance SaaS platform or an AI-driven medical tool, my goal is always the same: **Minimalism that speaks volumes.**
-                        </p>
+My work emphasizes clear interfaces, performance, and simple, scalable engineering solutions.                        </p>
+                        
                     </div>
                 </div>
             </div>
